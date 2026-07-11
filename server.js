@@ -1,4 +1,6 @@
 const express = require("express");
+let compression = null;
+try { compression = require("compression"); } catch { /* optional; install with `npm install` */ }
 const path = require("path");
 const http = require("http");
 const https = require("https");
@@ -269,7 +271,21 @@ const OS_KEY = process.env.OPENSUBTITLES_KEY || CFG.opensubtitlesKey || "";
 
 const app = express();
 app.set("trust proxy", true);
+app.disable("x-powered-by");
 app.use(express.json({ limit: "2mb" }));
+
+if (compression) {
+  // Skip the HLS proxy path — video traffic must stream raw and would be
+  // pointlessly re-compressed. Static assets, JSON APIs and playlists all
+  // benefit hugely (JS/HTML/JSON typically shrink ~70%).
+  app.use(compression({
+    threshold: 1024,
+    filter: (req, res) => {
+      if (req.path.startsWith("/api/stream")) return false;
+      return compression.filter(req, res);
+    },
+  }));
+}
 
 if (USER && PASS) {
   app.use((req, res, next) => {
@@ -303,7 +319,27 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"), {
+  etag: true,
+  lastModified: true,
+  setHeaders(res, filePath) {
+    const ext = path.extname(filePath).toLowerCase();
+    // HTML: revalidate every load so a redeploy is picked up.
+    if (ext === ".html" || ext === ".htm") {
+      res.setHeader("Cache-Control", "no-cache");
+      return;
+    }
+    // Immutable buckets (versioned/content-addressed) — safe to cache long.
+    if (filePath.includes(`${path.sep}js${path.sep}`) ||
+        filePath.includes(`${path.sep}brand${path.sep}`) ||
+        filePath.includes(`${path.sep}design${path.sep}`) ||
+        ext === ".svg" || ext === ".woff" || ext === ".woff2" || ext === ".ico") {
+      res.setHeader("Cache-Control", "public, max-age=2592000, immutable"); // 30d
+      return;
+    }
+    res.setHeader("Cache-Control", "public, max-age=3600");
+  },
+}));
 
 function proxyBase(req) {
   const rawProto = (req.headers["x-forwarded-proto"] || req.protocol || "http").split(",")[0].trim();
