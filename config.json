@@ -1,0 +1,15 @@
+{
+  "publicDomain": "https://backstream.app",
+  "port": 3000,
+  "playlistCacheMinutes": 10,
+  "epgCacheMinutes": 60,
+  "epgUrl": "http://ott.km4ever.org/xmltv.php?username=3974883100&password=4772223692",
+  "tmdbKey": "",
+  "playlists": [
+    {
+      "name": "My Provider",
+      "url": "http://ott.km4ever.org/get.php?username=3974883100&password=4772223692&type=m3u_plus&output=ts",
+      "epg": "http://ott.km4ever.org/xmltv.php?username=3974883100&password=4772223692"
+    }
+  ]
+}

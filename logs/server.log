@@ -1,0 +1,17 @@
+[config] Loaded config.json
+
+  ┌────────────────────────────────────────────┐
+  │         BÄCK — Stream Smarter  v3.2         │
+  └────────────────────────────────────────────┘
+
+   On this device : http://localhost:3000
+   On your LAN    : http://10.167.67.84
+   Outside LAN    : https://desktop-2malkg9.tail2c0b53.ts.net   (Tailscale HTTPS)
+   Enable Funnel  : https://login.tailscale.com/f/funnel?node=nkzm3wMfY421CNTRL
+
+   Metadata/trailers : off — add a tmdbKey to enable
+   Xtream Codes API : ✓
+   Subtitles        : ON (Wyzie fallback)
+   Flow: You -> Player -> THIS SERVER -> IPTV Source
+   Stop: press Ctrl+C
+

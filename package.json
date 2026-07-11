@@ -1,0 +1,36 @@
+{
+  "name": "back-proxy",
+  "version": "3.0.0",
+  "description": "BÄCK — Stream Smarter. Private self-hosted IPTV player: Netflix-style UI, Swedish localization, EPG grid, DVR, Xtream Codes, profiles, search, and HLS-rewrite proxy.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --no-cache --verbose --forceExit --detectOpenHandles",
+    "test:server": "jest tests/server.test.js --no-cache --verbose --forceExit",
+    "test:client": "jest tests/client.test.js --no-cache --verbose",
+    "test:i18n": "jest tests/i18n-sv.test.js --no-cache --verbose",
+    "test:stress": "jest tests/stress.test.js --no-cache --verbose --forceExit"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "../tests"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "tests"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^8.0.1",
+    "jest": "^29.7.0"
+  }
+}

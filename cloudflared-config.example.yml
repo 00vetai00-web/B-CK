@@ -1,0 +1,16 @@
+# Cloudflare named tunnel for backstream.app
+# 1. cloudflared tunnel login
+# 2. cloudflared tunnel create back
+# 3. cloudflared tunnel route dns back backstream.app
+# 4. Copy this file to %USERPROFILE%\.cloudflared\config.yml
+# 5. Replace TUNNEL-UUID with: cloudflared tunnel list
+
+tunnel: TUNNEL-UUID
+credentials-file: C:\Users\YOUR_USER\.cloudflared\TUNNEL-UUID.json
+
+ingress:
+  - hostname: backstream.app
+    service: http://127.0.0.1:3000
+  - hostname: www.backstream.app
+    service: http://127.0.0.1:3000
+  - service: http_status:404

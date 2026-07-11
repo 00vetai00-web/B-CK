@@ -1,0 +1,76 @@
+2026-07-11T15:37:59Z TUI session start config=/a/Projekt/BÄCK-GROK/back-proxy/services.conf
+2026-07-11T15:38:24Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:38:25Z ERROR: [back-proxy] failed to start — check logs
+2026-07-11T15:38:30Z TUI session start config=/a/Projekt/BÄCK-GROK/back-proxy/services.conf
+2026-07-11T15:38:33Z START cloudflared cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=tools\cloudflared.exe tunnel --url http://127.0.0.1:3000 --no-autoupdate --logfile logs/cloudflared.log --loglevel info
+2026-07-11T15:38:34Z ERROR: [cloudflared] failed to start — check logs
+2026-07-11T15:39:44Z STOP back-proxy
+2026-07-11T15:39:45Z STOPPED back-proxy port=3000
+2026-07-11T15:39:47Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:39:49Z STARTED back-proxy pid=9036
+2026-07-11T15:39:54Z RESTART back-proxy
+2026-07-11T15:39:54Z STOP back-proxy
+2026-07-11T15:39:54Z STOPPED back-proxy pid=9036
+2026-07-11T15:39:55Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:39:57Z STARTED back-proxy pid=17220
+2026-07-11T15:40:05Z START cloudflared cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=tools\cloudflared.exe tunnel --url http://127.0.0.1:3000 --no-autoupdate --logfile logs/cloudflared.log --loglevel info
+2026-07-11T15:40:06Z STARTED cloudflared pid=21460
+2026-07-11T15:40:15Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:40:15Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:40:16Z ERROR: [back-proxy] failed to start - check logs
+2026-07-11T15:40:21Z STOP back-proxy
+2026-07-11T15:40:22Z STOPPED back-proxy port=3000
+2026-07-11T15:40:52Z STOP back-proxy
+2026-07-11T15:41:03Z STOP back-proxy
+2026-07-11T15:41:18Z STOP back-proxy
+2026-07-11T15:41:19Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:41:20Z STARTED back-proxy pid=27088
+2026-07-11T15:41:30Z STOP back-proxy
+2026-07-11T15:41:30Z STOPPED back-proxy pid=27088
+2026-07-11T15:41:38Z STOP back-proxy
+2026-07-11T15:41:42Z STOP back-proxy
+2026-07-11T15:41:44Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:41:45Z STARTED back-proxy pid=13320
+2026-07-11T15:41:47Z RESTART back-proxy
+2026-07-11T15:41:47Z STOP back-proxy
+2026-07-11T15:41:48Z STOPPED back-proxy pid=13320
+2026-07-11T15:41:49Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T15:41:50Z STARTED back-proxy pid=22684
+2026-07-11T15:41:52Z BACKUP back-proxy -> A:\Projekt\BÄCK-GROK\back-proxy\.service-state\backups\back-proxy-20260711T154152Z.zip
+2026-07-11T15:41:59Z STOP cloudflared
+2026-07-11T15:42:00Z STOPPED cloudflared pid=21460
+2026-07-11T15:42:00Z START cloudflared cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=tools\cloudflared.exe tunnel --url http://127.0.0.1:3000 --no-autoupdate --logfile logs/cloudflared.log --loglevel info
+2026-07-11T15:42:00Z STARTED cloudflared pid=10264
+2026-07-11T15:44:15Z TUI session start config=A:\Projekt\BÄCK-GROK\back-proxy\services.conf
+2026-07-11T16:07:10Z RESTART back-proxy
+2026-07-11T16:07:10Z STOP back-proxy
+2026-07-11T16:07:11Z STOPPED back-proxy pid=22684
+2026-07-11T16:07:13Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T16:07:14Z STARTED back-proxy pid=18388
+2026-07-11T16:11:46Z RESTART back-proxy
+2026-07-11T16:11:46Z STOP back-proxy
+2026-07-11T16:11:47Z STOPPED back-proxy pid=18388
+2026-07-11T16:11:49Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T16:11:50Z STARTED back-proxy pid=12952
+2026-07-11T16:20:38Z STOP back-proxy
+2026-07-11T16:20:38Z STOPPED back-proxy pid=12952
+2026-07-11T16:20:39Z STOP cloudflared
+2026-07-11T16:20:50Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T16:20:50Z STARTED back-proxy pid=11288
+2026-07-11T16:20:53Z START cloudflared cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=tools\cloudflared.exe tunnel --url http://127.0.0.1:3000 --no-autoupdate --logfile logs/cloudflared.log --loglevel info
+2026-07-11T16:20:53Z STARTED cloudflared pid=5888
+2026-07-11T16:29:48Z ERROR: Config not found: restart (copy services.conf.example to services.conf)
+2026-07-11T16:29:53Z RESTART back-proxy
+2026-07-11T16:29:53Z STOP back-proxy
+2026-07-11T16:29:53Z STOPPED back-proxy pid=11288
+2026-07-11T16:29:55Z START back-proxy cwd=A:\Projekt\BÄCK-GROK\back-proxy cmd=node server.js
+2026-07-11T16:29:56Z STARTED back-proxy pid=13844
+2026-07-11T16:34:52Z TUI session start config=A:\Projekt\BÄCK-GROK\back-proxy\services.conf
+2026-07-11T16:35:00Z ERROR: Invalid selection
+2026-07-11T16:35:02Z TUI session start config=A:\Projekt\BÄCK-GROK\back-proxy\services.conf
+2026-07-11T16:35:13Z ERROR: Invalid selection
+2026-07-11T16:35:14Z TUI session start config=A:\Projekt\BÄCK-GROK\back-proxy\services.conf
+2026-07-11T16:35:22Z STOP back-proxy
+2026-07-11T16:35:23Z STOPPED back-proxy pid=13844
+2026-07-11T16:35:28Z STOP cloudflared
+2026-07-11T16:35:28Z STOPPED cloudflared pid=5888

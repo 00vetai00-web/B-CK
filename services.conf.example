@@ -1,0 +1,30 @@
+# BACK service definitions for manage-services.ps1 (Windows) or manage-services.sh (WSL/Linux)
+# Copy to services.conf and edit paths for your system.
+#
+# Windows example:
+#   workdir=A:\Projekt\BÄCK-GROK\back-proxy
+#   start_cmd=node server.js
+# Linux example:
+#   workdir=/opt/back-proxy
+#
+# Required per service: workdir, start_cmd
+# Optional: stop_cmd, pid_file, log_file, config_files, port, update_cmd
+
+[back-proxy]
+workdir=/opt/back-proxy
+start_cmd=node server.js
+stop_cmd=
+pid_file=.back-proxy.pid
+log_file=logs/server.log
+port=3000
+config_files=config.json,tunnel.json,profile-sync.json
+update_cmd=git pull && npm install --omit=dev
+
+[cloudflared]
+workdir=/opt/back-proxy
+start_cmd=./tools/cloudflared tunnel --url http://127.0.0.1:3000 --no-autoupdate --logfile logs/cloudflared.log --loglevel info
+stop_cmd=
+pid_file=.cloudflared.pid
+log_file=logs/cloudflared.log
+config_files=tunnel.json
+update_cmd=

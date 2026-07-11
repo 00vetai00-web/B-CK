@@ -1,0 +1,40 @@
+{
+  "accounts": [
+    {
+      "id": "umrgkyvme99d10394",
+      "name": "TestUser",
+      "avatar": "#00E5FF",
+      "pinSalt": "ca9a4aae70244aaca0571dd661b8648e",
+      "pinHash": "5da3193aebb8dde6cb90d67e5922bdebadcc6d9cd278426ac1e6b7b870f1c906",
+      "createdAt": 1783787411606
+    },
+    {
+      "id": "umrgkyz7cbea76498",
+      "name": "Other",
+      "avatar": "#7C3AED",
+      "pinSalt": "a16176597db3fc305e45e77b98a84a8f",
+      "pinHash": "33d9d443cc351987e2e1385aef1390b573776b7e9794657d59d5b1e67c7eb495",
+      "createdAt": 1783787416248
+    }
+  ],
+  "session": {
+    "token": "fe4fdd74c451b341d2d14b875dbf57fd8f8efb420e173e54",
+    "accountId": "umrgkyz7cbea76498",
+    "accountName": "Other",
+    "avatar": "#7C3AED",
+    "lastSeen": 1783787426050,
+    "takeoverRequest": null
+  },
+  "takeoverResults": {
+    "tk_mrgkz6rf1b11fa": {
+      "status": "accepted",
+      "at": 1783787426051,
+      "token": "fe4fdd74c451b341d2d14b875dbf57fd8f8efb420e173e54",
+      "account": {
+        "id": "umrgkyz7cbea76498",
+        "name": "Other",
+        "avatar": "#7C3AED"
+      }
+    }
+  }
+}

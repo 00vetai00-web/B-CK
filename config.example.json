@@ -1,0 +1,19 @@
+{
+  "publicDomain": "https://backstream.app",
+  "_comment_domain": "Canonical brand URL. Run enable-domain.ps1 for live HTTPS (Cloudflare tunnel or Tailscale Funnel).",
+  "port": 3000,
+  "_comment_tailscale": "Server binds 0.0.0.0 — reachable via LAN and Tailscale (100.x.x.x). Open http://<tailscale-ip>:3000 from any device in your tailnet. Windows may need an inbound firewall rule on this port for the Tailscale adapter.",
+  "playlistCacheMinutes": 10,
+  "epgCacheMinutes": 60,
+  "epgUrl": "",
+  "tmdbKey": "",
+  "_comment_tmdb": "Free API key from https://www.themoviedb.org/settings/api — enables posters, plot, cast & YouTube trailers",
+  "opensubtitlesKey": "",
+  "playlists": [
+    {
+      "name": "My Provider",
+      "url": "http://your-provider/get.php?username=USER&password=PASS&type=m3u_plus",
+      "epg": "http://your-provider/xmltv.php?username=USER&password=PASS"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "BÄCK — Stream Smarter",
+  "short_name": "BÄCK",
+  "description": "Private IPTV player. All streams route through your own server.",
+  "start_url": "https://backstream.app/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
